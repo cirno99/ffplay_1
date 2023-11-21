@@ -4,11 +4,12 @@ project(ffplay_clion)
 set(CMAKE_CXX_STANDARD 14)
 
 ## 添加头文件
-include_directories(/usr/local/include)
-include_directories(/usr/local/include/SDL2)
+include_directories(/usr/include)
+include_directories(/usr/include/SDL2)
 
 ## 添加目标链接
-link_libraries(/usr/local/lib/libSDL2.dylib)
+link_libraries(/usr/lib/libSDL2-2.0.so.0)
+link_libraries(/usr/lib/libm.so.6)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBAV REQUIRED IMPORTED_TARGET
